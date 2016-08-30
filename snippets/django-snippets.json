@@ -1,0 +1,77 @@
+{
+    "Model": {
+        "prefix": "class Django Model",
+        "description": "Django Model class snippet",
+        "body": [
+            "class ${Name}(models.Model):",
+            "    $1",
+            "",
+            "    def __str__(self):",
+            "        return $2",
+            "",
+            "    def __unicode__(self):",
+            "        return $2",
+            ""
+        ]
+    },
+    "Model Admin": {
+        "prefix": "class Django ModelAdmin",
+        "desciption": "Django ModelAdmin class snippet",
+        "body": [
+            "class ${Name}Admin(admin.ModelAdmin):",
+            "    list_display = ('$1',)",
+            "",
+            "admin.site.register(${Name}, ${Name}Admin)",
+            ""
+        ]
+    },
+    "Blank and Null Field Properties": {
+        "prefix": "blank and null Djngo Field",
+        "desciption": "Django Blank and Null model field properties snippet",
+        "body": [
+            "blank=True, null=True"
+        ]
+    },
+    "CharField": {
+        "prefix": "CharField",
+        "desciption": "Django CharField snippet",
+        "body": [
+            "${name} = models.CharField(max_length=${length}, ${blank=True, null=True})"
+        ]
+    },
+    "Foreign Key": {
+        "prefix": "ForeignKeyField",
+        "description": "Django ForeignKeyField snippet",
+        "body": [
+            "${name} = models.ForeignKeyField('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
+        ]
+    },
+    "Override Save Method": {
+        "prefix": "save method Django Override",
+        "description": "Django override save() method of models",
+        "body": [
+            "def save(self, *args, **kwargs):",
+            "   $1",
+            "   super(${ModelName}, self).save(*args, **kwargs) # Call the real save() method"
+        ]
+    },
+    "ListView": {
+        "prefix": "ListView",
+        "description": "Django generic ListView",
+        "body": [
+            "class ${ModelName}List(ListView):",
+            "    model = ${ModelName}",
+            "    context_object_name = '$1'",
+            "    template_name='$2'"
+        ]
+    },
+    "DetailView": {
+        "prefix": "DetailView",
+        "description": "Django generic DetailView",
+        "body": [
+            "class ${ModelName}Detail(DetailView):",
+            "    model = ${ModelName}",
+            "    template_name='$2'"
+        ]
+    }
+}

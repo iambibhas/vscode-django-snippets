@@ -1,0 +1,27 @@
+{
+    "name": "django-snippets",
+    "displayName": "Django Snippets",
+    "description": "Common Django snippets for everyday use",
+    "version": "1.0.0",
+    "publisher": "bibhasdn",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/django-snippets.json"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+}
