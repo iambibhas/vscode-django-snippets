@@ -55,6 +55,18 @@
             "   super(${ModelName}, self).save(*args, **kwargs) # Call the real save() method"
         ]
     },
+    "View": {
+        "prefix": "View",
+        "description": "Django generic class based View",
+        "body": [
+            "class ${Name}View(View):",
+            "    def get(self, request, *args, **kwargs):",
+            "        return HttpResponse('GET request!')",
+            "",
+            "    def post(self, request, *args, **kwargs):",
+            "        return HttpResponse('POST request!')"
+        ]
+    },
     "ListView": {
         "prefix": "ListView",
         "description": "Django generic ListView",
@@ -72,6 +84,44 @@
             "class ${ModelName}Detail(DetailView):",
             "    model = ${ModelName}",
             "    template_name='$2'"
+        ]
+    },
+    "get_context_data": {
+        "prefix": "get_context_data",
+        "description": "Django get_context_data for generic views",
+        "body": [
+            "def get_context_data(self, **kwargs):",
+            "    context = super(${ViewName}, self).get_context_data(**kwargs)",
+            "    return context"
+        ]
+    },
+    "__init__": {
+        "prefix": "__init__",
+        "description": "__init__() method",
+        "body": [
+            "__init__(self, *args, **kwargs):",
+            "$1"
+        ]
+    },
+    "traceback": {
+        "prefix": "Traceback",
+        "description": "Print Traceback",
+        "body": [
+            "import traceback; traceback.print_exc();"
+        ]
+    },
+    "pdb": {
+        "prefix": "pdb",
+        "description": "PDB breakpoint",
+        "body": [
+            "import pdb ; pdb.set_trace()"
+        ]
+    },
+    "ipdb": {
+        "prefix": "ipdb",
+        "description": "IPDB breakpoint",
+        "body": [
+            "import ipdb ; ipdb.set_trace()"
         ]
     }
 }
