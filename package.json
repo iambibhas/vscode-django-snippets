@@ -2,7 +2,7 @@
     "name": "django-snippets",
     "displayName": "Django Snippets",
     "description": "Common Django snippets for everyday use",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "bibhasdn",
     "icon": "icon.png",
     "repository": {
