@@ -43,7 +43,7 @@
         "prefix": "ForeignKeyField",
         "description": "Django ForeignKeyField snippet",
         "body": [
-            "${name} = models.ForeignKeyField('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
+            "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
         ]
     },
     "Override Save Method": {
