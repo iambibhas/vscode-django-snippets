@@ -11,6 +11,12 @@
             "",
             "    def __unicode__(self):",
             "        return $2",
+            "",
+            "   class Meta:",
+            "",
+            "        db_table = '${Name}'",
+            "        managed = True",
+            "        app_label = ''",
             ""
         ]
     },
@@ -52,7 +58,7 @@
         ]
     },
     "Foreign Key": {
-        "prefix": "ForeignKeyField",
+        "prefix": "FK",
         "description": "Django ForeignKeyField snippet",
         "body": [
             "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
