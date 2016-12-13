@@ -1,6 +1,6 @@
 {
     "Model": {
-        "prefix": "class Django Model",
+        "prefix": "Model",
         "description": "Django Model class snippet",
         "body": [
             "class ${Name}(models.Model):",
@@ -11,6 +11,12 @@
             "",
             "    def __unicode__(self):",
             "        return $2",
+            "",
+            "   class Meta:",
+            "",
+            "        db_table = '${Name}'",
+            "        managed = True",
+            "        app_label = ''",
             ""
         ]
     },
@@ -25,6 +31,18 @@
             ""
         ]
     },
+
+    "Model Admin Decorator":{
+    "prefix": "madmindec",
+    "body": [
+      "@admin.register(${name:ModelName})",
+      "class Admin${name:ModelName}(admin.ModelAdmin):",
+      "  pass",
+      ""
+    ],
+    "description": "Model Admin using Decorator"
+    },
+
     "Blank and Null Field Properties": {
         "prefix": "blank and null Djngo Field",
         "desciption": "Django Blank and Null model field properties snippet",
@@ -40,10 +58,17 @@
         ]
     },
     "Foreign Key": {
-        "prefix": "ForeignKeyField",
+        "prefix": "FK",
         "description": "Django ForeignKeyField snippet",
         "body": [
             "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
+        ]
+    },
+    "Many To Many": {
+        "prefix" : "m2m",
+        "description" : "ManyToMany Field Autocomplete",
+        "body" : [
+            "${name:FieldName} = models.ManyToManyField()"
         ]
     },
     "Override Save Method": {
