@@ -64,6 +64,13 @@
             "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
         ]
     },
+    "Many To Many": {
+        "prefix" : "m2m",
+        "description" : "ManyToMany Field Autocomplete",
+        "body" : [
+            "${name:FieldName} = models.ManyToManyField()"
+        ]
+    },
     "Override Save Method": {
         "prefix": "save method Django Override",
         "description": "Django override save() method of models",
