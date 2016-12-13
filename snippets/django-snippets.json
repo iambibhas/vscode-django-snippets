@@ -1,6 +1,6 @@
 {
     "Model": {
-        "prefix": "class Django Model",
+        "prefix": "Model",
         "description": "Django Model class snippet",
         "body": [
             "class ${Name}(models.Model):",
@@ -25,6 +25,18 @@
             ""
         ]
     },
+
+    "Model Admin Decorator":{
+    "prefix": "madmindec",
+    "body": [
+      "@admin.register(${name:ModelName})",
+      "class Admin${name:ModelName}(admin.ModelAdmin):",
+      "  pass",
+      ""
+    ],
+    "description": "Model Admin using Decorator"
+    },
+
     "Blank and Null Field Properties": {
         "prefix": "blank and null Djngo Field",
         "desciption": "Django Blank and Null model field properties snippet",
