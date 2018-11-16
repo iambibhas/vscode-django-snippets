@@ -7,10 +7,10 @@
     "icon": "icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iambibhas/vscode-django-snippets .git"
+        "url": "https://github.com/iambibhas/vscode-django-snippets"
     },
     "bugs": {
-        "url": "https://github.com/iambibhas/vscode-django-snippets /issues"
+        "url": "https://github.com/iambibhas/vscode-django-snippets/issues"
     },
 
     "engines": {
